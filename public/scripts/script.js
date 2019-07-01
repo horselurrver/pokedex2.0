@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
     let result = [];
     let successes = 0;
-    for (let i = 0; i < pokemonNames.length; i++) {
+    /*for (let i = 0; i < pokemonNames.length; i++) {
       $.ajax({
         url: 'https://pokeapi.co/api/v2/pokemon/' + pokemonNames[i],
         type: 'GET',
@@ -56,10 +56,6 @@ $(document).ready(function() {
         success: function(data1) {
           result[i] = data1;
           successes = successes + 1;
-          /*if (successes === pokemonNames.length) {
-            pokemonObjects = result;
-            renderHBS(result);
-          }*/
           $.ajax({
             url: 'http://localhost:3000/newpokemon',
             type: 'POST',
@@ -81,5 +77,5 @@ $(document).ready(function() {
           alert('Request: ' + JSON.stringify(request));
         }
       });
-    }
+    }*/
 });

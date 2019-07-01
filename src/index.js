@@ -1,11 +1,21 @@
+// require express
 let express = require('express');
+// require express handlebars
+let exphbs  = require('express-handlebars');
 // set up the express application
 let app = express();
 // allow sending of files
 let path = require('path');
 // parse JSON being sent in
 let bodyParser = require('body-parser');
+// allow for file reading
+let fs = require("fs");
 
+// set up handlebars engine
+app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+app.set('view engine', 'hbs');
+
+// set up body parser
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
@@ -24,10 +34,21 @@ app.use((req, res, next) => {
 // handle 500 - internal error
 app.use((err, req, res, next) => {
   console.log(err.stack);
-  res.sendFile(path.join(__dirname, '../public/500.html'));
+  // res.sendFile(path.join(__dirname, '../public/500.html'));
+  res.render('500');
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.info(`Server has started at ${PORT}`);
 });
+
+function loadPokemonJSON() {
+  console.log("\n *START* \n");
+  var contents = fs.readFileSync(__dirname + "/jsoncontent.json");
+  var jsonContent = JSON.parse(contents);
+  console.log("Output Content : \n"+ JSON.stringify(jsonContent));
+  console.log("\n *EXIT* \n");
+}
+
+loadPokemonJSON();
