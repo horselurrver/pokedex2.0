@@ -1,0 +1,71 @@
+body {
+  padding: 5em;
+  background: linear-gradient(to bottom, #8d8d8d 0%, #ffffff 40%) no-repeat center center fixed;
+}
+
+.center {
+  text-align: center;
+}
+
+.form-inline {
+  margin-top: 3em;
+}
+
+.form-inline .form-control {
+  width: 70%;
+  display: inline-block;
+}
+
+.form-control {
+  background-color: inherit;
+  border: none;
+}
+
+input[type=text] {
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 1px 0 0 lightgrey;
+}
+
+input:focus {
+  border-bottom: 1px solid blue;
+  box-shadow: 0 1px 0 0 blue;
+}
+
+#pokedex-logo {
+  width: 50em;
+  margin: 0 auto;
+  display: block;
+}
+
+#mag-glass {
+  width: 2%;
+}
+
+.pokemonPlaceholder {
+  margin-top: 4em;
+}
+
+.pokemon {
+  display: inline-block;
+  background: lightblue;
+  margin: 1em;
+  width: 15em;
+}
+
+.pokemon:hover {
+  background: #caeefc;
+}
+
+.caption {
+  text-align: center;
+  color: white;
+  background: black;
+  opacity: 0.5;
+}
+
+.pokemon img {
+  display: block;
+  margin: 0 auto;
+  width: 10em;
+  margin-top: 1em;
+}
