@@ -17,7 +17,4 @@ $(document).ready(function() {
       }
     });
 
-    $('.pokemon').on('click', function(){
-      $('.pokemon').animate({left: '250px'});
-    });
 });
