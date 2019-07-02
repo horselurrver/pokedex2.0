@@ -1,0 +1,12 @@
+<ul>
+  {{#each pokemon}}
+    <div id="{{this.name}}" class="pokemon">
+      <a href='/pokemon/{{this.name}}'>
+        <img src="{{this.image}}"/>
+      </a>
+      <div class="caption">
+        <figcaption>{{formatName this.name}}</figcaption>
+      </div>
+    </div>
+  {{/each}}
+</ul>

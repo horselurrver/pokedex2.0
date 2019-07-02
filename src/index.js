@@ -8,8 +8,6 @@ let app = express();
 let path = require('path');
 // parse JSON being sent in
 let bodyParser = require('body-parser');
-// allow for file reading
-let fs = require("fs");
 
 // set up handlebars engine
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
@@ -42,13 +40,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.info(`Server has started at ${PORT}`);
 });
-
-function loadPokemonJSON() {
-  console.log("\n *START* \n");
-  var contents = fs.readFileSync(__dirname + "/jsoncontent.json");
-  var jsonContent = JSON.parse(contents);
-  console.log("Output Content : \n"+ JSON.stringify(jsonContent));
-  console.log("\n *EXIT* \n");
-}
-
-loadPokemonJSON();

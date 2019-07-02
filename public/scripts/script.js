@@ -32,50 +32,24 @@ function renderHBS(data) {
   $('.pokemonPlaceholder').html(theCompiledHtml);
 }
 
+result = []
 $(document).ready(function() {
     console.log( "ready!" );
     $('#searchbar').keyup(function() {
       let result = []
       let search = $('#searchbar').val();
+      console.log(search);
       search = search.toLowerCase();
-      for (let i = 0; i < pokemonObjects.length; i++) {
-        if (pokemonObjects[i].name.startsWith(search)) {
-          result.push(pokemonObjects[i]);
+      for (let i = 0; i < pokemonNames.length; i++) {
+        if (!pokemonNames[i].startsWith(search)) {
+          $('#' + pokemonNames[i]).hide();
+        } else {
+          $('#' + pokemonNames[i]).show();
         }
       }
-      renderHBS(result);
     });
-    let result = [];
-    let successes = 0;
-    /*for (let i = 0; i < pokemonNames.length; i++) {
-      $.ajax({
-        url: 'https://pokeapi.co/api/v2/pokemon/' + pokemonNames[i],
-        type: 'GET',
-        data: {},
-        dataType: 'json',
-        success: function(data1) {
-          result[i] = data1;
-          successes = successes + 1;
-          $.ajax({
-            url: 'http://localhost:3000/newpokemon',
-            type: 'POST',
-            data: {
-              name: data1.name,
-              url: data1.sprites.front_default,
-            },
-            async: false,
-            dataType: 'json',
-            success: function(data) {
-              console.log('posting: ' + JSON.stringify(data1));
-            },
-            error: function(request, error) {
-              alert('Request: ' + JSON.stringify(request));
-            }
-          });
-        },
-        error: function(request, error) {
-          alert('Request: ' + JSON.stringify(request));
-        }
-      });
-    }*/
+
+    $('.pokemon').on('click', function(){
+      $('.pokemon').animate({left: '250px'});
+    });
 });

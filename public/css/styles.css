@@ -38,7 +38,11 @@ input:focus {
 }
 
 #mag-glass {
-  width: 2%;
+  width: 1%;
+}
+
+ul {
+  margin-top: 3em;
 }
 
 .pokemonPlaceholder {
@@ -66,6 +70,6 @@ input:focus {
 .pokemon img {
   display: block;
   margin: 0 auto;
-  width: 10em;
-  margin-top: 1em;
+  width: 9em;
+  margin-top: 3em;
 }

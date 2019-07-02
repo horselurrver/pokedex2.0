@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+<html>
+<head>
+    <title>Amy's Pokedex</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel='shortcut icon' type='image/x-icon' href='./images/pokeball.png' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- logo -->
+  <img id="pokedex-logo" src="./images/pokedex.png" alt="Pokedex logo"/>
+  <!-- search form -->
+  <div class="center">
+    <form class="form-inline md-form form-sm mt-0 active-cyan active-cyan2">
+      <img src="./images/magnifying_glass.png" id="mag-glass"/>
+      <input id="searchbar" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+      aria-label="Search">
+      </input>
+    </form>
+  </div>
+  <!-- pokemon list -->
+  <!--<div class="pokemonPlaceholder">
+  </div>-->
+  {{{body}}}
+
+</body>
 </html>
