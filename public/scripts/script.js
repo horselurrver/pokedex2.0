@@ -28,7 +28,9 @@ $(document).ready(function() {
       let width = $(window).width();
       let thirdWidth = Math.round(width/3);
       let baseUrl = getBaseUrl();
-      let imageUrl = $(id + ' img').attr('src');
+      let imageUrl = $('#' + id  + ' img').attr('src');
+      let width = $(window).width();
+
       // hide the search bar
       $('.center').hide();
       // fade out all pokemon except the one that got clicked on
@@ -44,22 +46,10 @@ $(document).ready(function() {
         width: '20em',
       });
 
-      // make ajax call to endpoint
-      /*$.ajax({
-        'url': baseUrl + 'pokemon/' + id,
-        'type': 'GET',
-        'data': {
-          'name': id,
-          'image': imageUrl
-        }
-      });*/
-      /*setTimeOut(function() {
-        window.location = baseUrl + 'pokemon?name=' + id;
-      }, 2000);*/
       setTimeout(
         function()
         {
           window.location = baseUrl + 'pokemon/' + id;
-        }, 3000);
+        }, 1000);
   });
 });

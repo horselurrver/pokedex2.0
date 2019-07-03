@@ -10,7 +10,7 @@
 
 <ul>
   {{#each pokemon}}
-    <div id="{{this.name}}" class="pokemon">
+    <div id="{{formatName this.name}}" class="pokemon">
       <!--<a href='/pokemon/{{this.name}}'>-->
       <a>
         <img src="{{this.image}}"/>

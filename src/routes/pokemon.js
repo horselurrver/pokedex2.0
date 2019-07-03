@@ -35,7 +35,9 @@ route.get('/', (req, res, next) => {
 
 // params on request object
 route.get('/pokemon/:name', (req, res, next) => {
-  res.render('pokemon');
+  res.render('pokemon', {
+    name: req.params.name,
+  });
 
 });
 

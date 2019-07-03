@@ -42,7 +42,7 @@ input:focus {
 }
 
 ul {
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 .pokemonPlaceholder {
@@ -74,4 +74,9 @@ ul {
   width: 9em;
   margin-top: 3em;
   position: relative;
+}
+
+.personal-page {
+  height: 20em;
+  width: 20em;
 }
