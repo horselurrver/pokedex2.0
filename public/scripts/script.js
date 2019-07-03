@@ -7,6 +7,18 @@ function getBaseUrl() {
   return re.exec(window.location.href);
 }
 
+function capitalize(name) {
+  result = ''
+  result = result + name.charAt(0).toUpperCase();
+  for (let i = 1; i < name.length; i++) {
+    if (name.charAt(i - 1) === '-') {
+      result = result + name.charAt(i).toUpperCase();
+    } else {
+      result = result + name.charAt(i);
+    }
+  }
+  return result;
+}
 result = []
 $(document).ready(function() {
     $('#searchbar').keyup(function() {
@@ -16,9 +28,9 @@ $(document).ready(function() {
       search = search.toLowerCase();
       for (let i = 0; i < pokemonNames.length; i++) {
         if (!pokemonNames[i].startsWith(search)) {
-          $('#' + pokemonNames[i]).hide();
+          $('#' + capitalize(pokemonNames[i])).hide();
         } else {
-          $('#' + pokemonNames[i]).show();
+          $('#' + capitalize(pokemonNames[i])).show();
         }
       }
     });
@@ -29,7 +41,6 @@ $(document).ready(function() {
       let thirdWidth = Math.round(width/3);
       let baseUrl = getBaseUrl();
       let imageUrl = $('#' + id  + ' img').attr('src');
-      let width = $(window).width();
 
       // hide the search bar
       $('.center').hide();
@@ -50,6 +61,6 @@ $(document).ready(function() {
         function()
         {
           window.location = baseUrl + 'pokemon/' + id;
-        }, 1000);
+        }, 500);
   });
 });
