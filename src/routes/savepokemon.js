@@ -17,7 +17,6 @@ router.post('/newpokemon', (req, res, next) => {
       if(! doc || doc.length === 0) {
         res.status(500).send(doc);
       }
-
       res.status(201).send(doc);
     })
     .catch(err => {
