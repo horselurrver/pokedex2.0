@@ -58,6 +58,7 @@ ul {
 
 .pokemon:hover {
   background: #caeefc;
+  cursor: pointer;
 }
 
 .caption {
@@ -72,4 +73,5 @@ ul {
   margin: 0 auto;
   width: 9em;
   margin-top: 3em;
+  position: relative;
 }

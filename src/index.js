@@ -33,7 +33,6 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   console.log(err.stack);
   // res.sendFile(path.join(__dirname, '../public/500.html'));
-  res.render('500');
 });
 
 const PORT = process.env.PORT || 3000;

@@ -35,7 +35,8 @@ route.get('/', (req, res, next) => {
 
 // params on request object
 route.get('/pokemon/:name', (req, res, next) => {
-  res.send(`You have requested the pokemon named ${req.params.name}`);
+  res.render('pokemon');
+
 });
 
 route.get('/error', (req, res, next) => {
