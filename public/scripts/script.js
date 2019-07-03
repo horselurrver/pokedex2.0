@@ -38,7 +38,7 @@ $(document).ready(function() {
     $('.pokemon').on('click', function() {
       let id = $(this).attr('id');
       let width = $(window).width();
-      let thirdWidth = Math.round(width/3);
+      let halfWidth = Math.round(width/3);
       let baseUrl = getBaseUrl();
       let imageUrl = $('#' + id  + ' img').attr('src');
 
