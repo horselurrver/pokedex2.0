@@ -52,7 +52,7 @@ $(document).ready(function() {
       $('#' + id + ' .caption').hide();
 
       $('#' + id + ' img').animate({
-        left: thirdWidth + 'px',
+        left: halfWidth + 'px',
         height: '20em',
         width: '20em',
       });
